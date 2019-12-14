@@ -23,6 +23,7 @@ router.post('/', function (req, res, next) {
 			name: req.body.name,
 			image: req.body.image,
 			category: req.body.category,
+			category_child: req.body.category_child,
 			code: req.body.code,
 			price: req.body.price,
 			is_out_stock: req.body.is_out_stock
@@ -43,6 +44,7 @@ router.put('/:id', function (req, res, next) {
 			name: req.body.name,
 			image: req.body.image,
 			category: req.body.category,
+			category_child: req.body.category_child,
 			code: req.body.code,
 			price: req.body.price,
 			is_out_stock: req.body.is_out_stock

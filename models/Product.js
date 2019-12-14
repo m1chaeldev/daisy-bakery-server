@@ -4,6 +4,7 @@ var ProductSchema = new mongoose.Schema({
   name: String,
   image: String,
   category: String,
+  category_child: String,
   code: String,
   price: Number,
   is_out_stock: { type: Boolean, default: false },

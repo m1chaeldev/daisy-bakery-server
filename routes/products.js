@@ -63,7 +63,7 @@ router.delete('/:id', function (req, res, next) {
 	if (req.body.serverKey === 'tuoilzphaduoctao123') {
 		Product.findByIdAndRemove(req.params.id, req.body, function (err, data) {
 			if (err) return next(err);
-			res.json(data);
+			res.json({ message: 'OK' });
 		});
 	} else res.json({ message: 'serverKey invalid' });
 });

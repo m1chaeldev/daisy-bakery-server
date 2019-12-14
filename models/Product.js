@@ -7,6 +7,7 @@ var ProductSchema = new mongoose.Schema({
   category_child: String,
   code: String,
   price: Number,
+  sale_off: Number,
   is_out_stock: { type: Boolean, default: false },
   started_date: { type: Date, default: Date.now }
 });

@@ -26,6 +26,7 @@ router.post('/', function (req, res, next) {
 			category_child: req.body.category_child,
 			code: req.body.code,
 			price: req.body.price,
+			sale_off: req.body.sale_off,
 			is_out_stock: req.body.is_out_stock
 		};
 		Product.create(formData, function (err, data) {
@@ -47,6 +48,7 @@ router.put('/:id', function (req, res, next) {
 			category_child: req.body.category_child,
 			code: req.body.code,
 			price: req.body.price,
+			sale_off: req.body.sale_off,
 			is_out_stock: req.body.is_out_stock
 		};
 		Product.findByIdAndUpdate(req.params.id, formData, function (err, data) {

@@ -5,7 +5,7 @@ var CartSchema = new mongoose.Schema({
   phone: String,
   address: String,
   note: String,
-  cart: Array,
+  cart: String,
   order_date: { type: Date, default: Date.now }
 });
 

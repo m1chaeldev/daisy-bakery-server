@@ -26,7 +26,8 @@ router.post('/', function (req, res, next) {
             address: req.body.address,
             note: req.body.note,
             cart: req.body.cart,
-            total_price: req.body.total_price
+            total_price: req.body.total_price,
+            status: req.body.status
         };
         Cart.create(formData, function (err, data) {
             if (err) {
@@ -48,6 +49,21 @@ router.put('/:id', function (req, res, next) {
             note: req.body.note,
             cart: req.body.cart,
             total_price: req.body.total_price
+        };
+        Cart.findByIdAndUpdate(req.params.id, formData, function (err, data) {
+            if (err) {
+                console.log(err);
+                return next(err);
+            }
+            res.json({ message: 'OK' });
+        });
+    } else res.json({ message: 'serverKey invalid' });
+});
+
+router.put('/:id/status', function (req, res, next) {
+    if (req.body.serverKey === 'tuoilzphaduoctao123') {
+        const formData = {
+            status: req.body.status
         };
         Cart.findByIdAndUpdate(req.params.id, formData, function (err, data) {
             if (err) {

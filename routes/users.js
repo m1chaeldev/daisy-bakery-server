@@ -55,6 +55,22 @@ router.put('/:id', function (req, res, next) {
 	} else res.json({ message: 'serverKey invalid' });
 });
 
+router.put('/:id/block', function (req, res, next) {
+	if (req.body.serverKey === 'tuoilzphaduoctao123') {
+		const formData = {
+			is_block: req.body.is_block,
+			block_reason: req.body.block_reason
+		};
+		User.findByIdAndUpdate(req.params.id, formData, function (err, data) {
+			if (err) {
+				console.log(err);
+				return next(err);
+			}
+			res.json({ message: 'OK' });
+		});
+	} else res.json({ message: 'serverKey invalid' });
+});
+
 router.delete('/:id', function (req, res, next) {
 	if (req.body.serverKey === 'tuoilzphaduoctao123') {
 		User.findByIdAndRemove(req.params.id, req.body, function (err, data) {

@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors());
 app.use('/', index);
-app.use('/users', users);
+app.use('/api/v1/users', users);
 app.use('/api/v1/product', products);
 app.use('/api/v1/cart', carts);
 app.use('/api/v1/category', categories);

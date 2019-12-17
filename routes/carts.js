@@ -25,7 +25,8 @@ router.post('/', function (req, res, next) {
             phone: req.body.phone,
             address: req.body.address,
             note: req.body.note,
-            cart: req.body.cart
+            cart: req.body.cart,
+            total_price: req.body.total_price
         };
         Cart.create(formData, function (err, data) {
             if (err) {
@@ -45,7 +46,8 @@ router.put('/:id', function (req, res, next) {
             phone: req.body.phone,
             address: req.body.address,
             note: req.body.note,
-            cart: req.body.cart
+            cart: req.body.cart,
+            total_price: req.body.total_price
         };
         Cart.findByIdAndUpdate(req.params.id, formData, function (err, data) {
             if (err) {

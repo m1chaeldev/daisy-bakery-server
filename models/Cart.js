@@ -7,6 +7,7 @@ var CartSchema = new mongoose.Schema({
   address: String,
   note: String,
   cart: String,
+  total_price: String,
   order_date: { type: Date, default: Date.now }
 });
 

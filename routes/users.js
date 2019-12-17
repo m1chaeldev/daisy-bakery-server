@@ -13,7 +13,7 @@ router.get('/:id', function (req, res, next) {
 	const formData = {
 		id: req.params.id
 	};
-	User.find(formData, function (err, data) {
+	User.findOne(formData, function (err, data) {
 		if (err) return next(err);
 		res.json({ message: 'OK', data });
 	});

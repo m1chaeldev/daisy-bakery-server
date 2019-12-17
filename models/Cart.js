@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var CartSchema = new mongoose.Schema({
   owner: String,
+  name: String,
   phone: String,
   address: String,
   note: String,

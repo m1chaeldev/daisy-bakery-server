@@ -21,6 +21,7 @@ router.post('/', function (req, res, next) {
     if (req.body.serverKey === 'tuoilzphaduoctao123') {
         const formData = {
             owner: req.body.owner,
+            name: req.body.name,
             phone: req.body.phone,
             address: req.body.address,
             note: req.body.note,
@@ -40,6 +41,7 @@ router.put('/:id', function (req, res, next) {
     if (req.body.serverKey === 'tuoilzphaduoctao123') {
         const formData = {
             owner: req.body.owner,
+            name: req.body.name,
             phone: req.body.phone,
             address: req.body.address,
             note: req.body.note,

@@ -1,25 +1,21 @@
 #!/usr/bin/env node
-
-/**
- * Module dependencies.
- */
-
 var app = require('../app');
+var fs = require("fs");
 var debug = require('debug')('node-rest-api:server');
-var https = require('https');
-
-/**
- * Get port from environment and store in Express.
- */
+var https = require('https'); // for product
+// var http = require('http'); // for dev
 
 var port = normalizePort(process.env.PORT || '4000');
 app.set('port', port);
 
-/**
- * Create HTTP server.
- */
+// for product
+var options = {
+  cert: fs.readFileSync('/etc/letsencrypt/live/banhdaisy.com/fullchain.pem'),
+  key: fs.readFileSync('/etc/letsencrypt/live/banhdaisy.com/privkey.pem')
+};
 
-var server = https.createServer(app);
+// var server = http.createServer(app); // for dev
+var server = https.createServer(options, app); // for product
 
 /**
  * Listen on provided port, on all network interfaces.

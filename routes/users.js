@@ -10,7 +10,10 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/:id', function (req, res, next) {
-	User.findById(req.params.id, function (err, data) {
+	const formData = {
+		id: req.params.id
+	};
+	User.find(formData, function (err, data) {
 		if (err) return next(err);
 		res.json({ message: 'OK', data });
 	});

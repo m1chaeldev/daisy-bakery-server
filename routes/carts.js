@@ -18,7 +18,7 @@ router.get('/:id', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
-    if (req.body.serverKey === 'tuoilzphaduoctao123') {
+    if (req.body.serverKey === 'test123') {
         const formData = {
             owner: req.body.owner,
             name: req.body.name,
@@ -40,7 +40,7 @@ router.post('/', function (req, res, next) {
 });
 
 router.put('/:id', function (req, res, next) {
-    if (req.body.serverKey === 'tuoilzphaduoctao123') {
+    if (req.body.serverKey === 'test123') {
         const formData = {
             owner: req.body.owner,
             name: req.body.name,
@@ -61,7 +61,7 @@ router.put('/:id', function (req, res, next) {
 });
 
 router.put('/:id/status', function (req, res, next) {
-    if (req.body.serverKey === 'tuoilzphaduoctao123') {
+    if (req.body.serverKey === 'test123') {
         const formData = {
             status: req.body.status
         };
@@ -76,7 +76,7 @@ router.put('/:id/status', function (req, res, next) {
 });
 
 router.delete('/:id', function (req, res, next) {
-    if (req.body.serverKey === 'tuoilzphaduoctao123') {
+    if (req.body.serverKey === 'test123') {
         Cart.findByIdAndRemove(req.params.id, req.body, function (err, data) {
             if (err) return next(err);
             res.json({ message: 'OK' });

@@ -18,7 +18,7 @@ router.get('/:id', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
-	if (req.body.serverKey === 'tuoilzphaduoctao123') {
+	if (req.body.serverKey === 'test123') {
 		const formData = {
 			name: req.body.name,
 			image: req.body.image,
@@ -40,7 +40,7 @@ router.post('/', function (req, res, next) {
 });
 
 router.put('/:id', function (req, res, next) {
-	if (req.body.serverKey === 'tuoilzphaduoctao123') {
+	if (req.body.serverKey === 'test123') {
 		const formData = {
 			name: req.body.name,
 			image: req.body.image,
@@ -62,7 +62,7 @@ router.put('/:id', function (req, res, next) {
 });
 
 router.delete('/:id', function (req, res, next) {
-	if (req.body.serverKey === 'tuoilzphaduoctao123') {
+	if (req.body.serverKey === 'test123') {
 		Product.findByIdAndRemove(req.params.id, req.body, function (err, data) {
 			if (err) return next(err);
 			res.json({ message: 'OK' });

@@ -20,7 +20,7 @@ router.get('/:id', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
-	if (req.body.serverKey === 'tuoilzphaduoctao123') {
+	if (req.body.serverKey === 'test123') {
 		const formData = {
 			id: req.body.id,
 			name: req.body.name,
@@ -38,7 +38,7 @@ router.post('/', function (req, res, next) {
 });
 
 router.put('/:id', function (req, res, next) {
-	if (req.body.serverKey === 'tuoilzphaduoctao123') {
+	if (req.body.serverKey === 'test123') {
 		const formData = {
 			id: req.body.id,
 			name: req.body.name,
@@ -56,7 +56,7 @@ router.put('/:id', function (req, res, next) {
 });
 
 router.put('/:id/block', function (req, res, next) {
-	if (req.body.serverKey === 'tuoilzphaduoctao123') {
+	if (req.body.serverKey === 'test123') {
 		const formData = {
 			is_block: req.body.is_block,
 			block_reason: req.body.block_reason
@@ -72,7 +72,7 @@ router.put('/:id/block', function (req, res, next) {
 });
 
 router.delete('/:id', function (req, res, next) {
-	if (req.body.serverKey === 'tuoilzphaduoctao123') {
+	if (req.body.serverKey === 'test123') {
 		User.findByIdAndRemove(req.params.id, req.body, function (err, data) {
 			if (err) return next(err);
 			res.json({ message: 'OK' });

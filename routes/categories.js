@@ -21,7 +21,7 @@ router.get('/child/:id', function (req, res, next) {
 });
 
 router.post('/child', function (req, res, next) {
-    if (req.body.serverKey === 'tuoilzphaduoctao123') {
+    if (req.body.serverKey === 'test123') {
         const formData = {
             category: req.body.category,
             name: req.body.name
@@ -37,7 +37,7 @@ router.post('/child', function (req, res, next) {
 });
 
 router.put('/child/:id', function (req, res, next) {
-    if (req.body.serverKey === 'tuoilzphaduoctao123') {
+    if (req.body.serverKey === 'test123') {
         const formData = {
             category: req.body.category,
             name: req.body.name
@@ -53,7 +53,7 @@ router.put('/child/:id', function (req, res, next) {
 });
 
 router.delete('/child/:id', function (req, res, next) {
-    if (req.body.serverKey === 'tuoilzphaduoctao123') {
+    if (req.body.serverKey === 'test123') {
         CategoryChild.findByIdAndRemove(req.params.id, req.body, function (err, data) {
             if (err) return next(err);
             res.json({ message: 'OK' });
@@ -78,7 +78,7 @@ router.get('/:id', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
-    if (req.body.serverKey === 'tuoilzphaduoctao123') {
+    if (req.body.serverKey === 'test123') {
         const formData = {
             name: req.body.name
         };
@@ -93,7 +93,7 @@ router.post('/', function (req, res, next) {
 });
 
 router.put('/:id', function (req, res, next) {
-    if (req.body.serverKey === 'tuoilzphaduoctao123') {
+    if (req.body.serverKey === 'test123') {
         const formData = {
             name: req.body.name
         };
@@ -108,7 +108,7 @@ router.put('/:id', function (req, res, next) {
 });
 
 router.delete('/:id', function (req, res, next) {
-    if (req.body.serverKey === 'tuoilzphaduoctao123') {
+    if (req.body.serverKey === 'test123') {
         Category.findByIdAndRemove(req.params.id, req.body, function (err, data) {
             if (err) return next(err);
             res.json({ message: 'OK' });
